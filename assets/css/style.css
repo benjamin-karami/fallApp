@@ -1,0 +1,748 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+[class*="grid-"] {
+  float: left;
+  padding: 10px;
+  width: 100%;
+}
+
+.clear-grid {
+  clear: both;
+  float: inherit;
+}
+.container {
+  margin: 0%;
+  width: 100%;
+}
+.container:after,
+.container:before {
+  display: table;
+  clear: both;
+  content: " ";
+}
+.nest {
+  margin: 0 -10px;
+  padding: 0;
+  width: auto;
+}
+
+/********* main-css ********/
+
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url("../fonts/Montserrat-Medium.ttf");
+}
+
+body {
+  font-family: Montserrat-Medium;
+  margin: auto;
+  background: url("../img/Background-Icon-Pack.png") repeat,
+    linear-gradient(
+      180deg,
+      rgba(90, 12, 123, 1) 0%,
+      rgba(71, 0, 101, 1) 25%,
+      rgba(60, 1, 85, 1) 50%,
+      rgba(42, 1, 53, 1) 75%,
+      rgba(32, 6, 39, 1) 100%
+    );
+  background-attachment: fixed;
+  background-size: contain;
+}
+
+#main-content {
+  max-width: 500px;
+  height: 100%;
+  margin: auto;
+  padding: 10px 2px 50px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-logo {
+  background: #e4e4e4;
+  border-radius: 50%;
+  max-width: 90px;
+  margin-bottom: -43px;
+  z-index: 1;
+}
+
+.card-text {
+  text-align: center;
+  background: #fff;
+  max-width: 500px;
+  padding: 30px 20px 30px;
+  border-radius: 40px;
+  width: 90%;
+  position: relative;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.d-none {
+  display: none;
+}
+
+.first-card {
+  padding-bottom: 70px;
+}
+
+.card-title {
+  margin: 15px auto;
+  font-size: 25px;
+  line-height: 1.5;
+  font-weight: 900;
+}
+
+.first-title {
+  margin-top: 35px;
+}
+
+.card-text-paragraph {
+  text-align: left;
+  color: #3c0155;
+  line-height: 1.5;
+  overflow: hidden;
+}
+
+.card-text-paragraph p:not(:first-child) {
+  display: none;
+}
+
+.card-btn {
+  background: #ffdf06;
+  color: #2a0135;
+  padding: 20px;
+  margin-top: -30px;
+  font-weight: 700;
+  border-radius: 5px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.margin-top {
+  margin-top: 50px;
+}
+
+.graf-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.graf-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.graf-container img {
+  max-width: 100px;
+}
+
+.horoscope-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 90%;
+  margin: auto;
+}
+
+.horoscope-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.horoscope-container img {
+  max-width: 105px;
+}
+
+.lucky-color-img {
+  max-width: 100px !important;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.social-media div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 12px;
+  width: 80px;
+}
+
+.social-media div img {
+  max-width: 40px;
+  margin-bottom: 10px;
+}
+
+.social-media div:nth-child(1) {
+  background: rgb(53, 148, 250);
+  background: linear-gradient(
+    180deg,
+    rgba(53, 148, 250, 1) 0%,
+    rgba(24, 110, 242, 1) 100%
+  );
+}
+.social-media div:nth-child(2) {
+  background: rgb(62, 191, 250);
+  background: linear-gradient(
+    180deg,
+    rgba(62, 191, 250, 1) 0%,
+    rgba(29, 161, 242, 1) 100%
+  );
+}
+.social-media div:nth-child(3) {
+  background: rgb(76, 235, 142);
+  background: linear-gradient(
+    180deg,
+    rgba(76, 235, 142, 1) 0%,
+    rgba(37, 211, 93, 1) 100%
+  );
+}
+
+.top-section {
+  padding: 20px;
+}
+
+.tomorrow-back {
+  background: rgb(255, 106, 106);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 106, 106, 1) 0%,
+    rgba(238, 21, 21, 1) 100%
+  );
+}
+
+.week-back {
+  background: rgb(53, 148, 250);
+  background: linear-gradient(
+    180deg,
+    rgba(53, 148, 250, 1) 0%,
+    rgba(24, 110, 242, 1) 100%
+  );
+}
+
+.month-back {
+  background: rgb(90, 12, 123);
+  background: linear-gradient(
+    180deg,
+    rgba(90, 12, 123, 1) 0%,
+    rgba(71, 0, 101, 1) 25%,
+    rgba(60, 1, 85, 1) 50%,
+    rgba(42, 1, 53, 1) 75%,
+    rgba(32, 6, 39, 1) 100%
+  );
+}
+
+.future-horoscope-padding {
+  padding: 0 0 70px;
+  overflow: hidden;
+}
+
+.top-section {
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.future-horoscope-text {
+  padding: 20px 20px 0;
+}
+
+.hidden-paragraph p:first-child {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  background: -webkit-linear-gradient(rgb(0, 0, 0), rgba(255, 255, 255, 0));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.selected-card {
+  width: 95%;
+  box-shadow: 0 2px 15px rgba(255, 255, 255, 0.9);
+  transform: scale(1.02);
+}
+
+.card-slide-close {
+  position: absolute;
+  right: 40px;
+  margin: auto;
+  font-weight: 900;
+  top: 35px;
+  transition: 0.5s;
+  font-size: 25px;
+}
+
+.card-slide-close:hover {
+  transform: rotate(360deg);
+}
+
+.future-horoscope-text p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  background: -webkit-linear-gradient(rgb(0, 0, 0), rgba(255, 255, 255, 0));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.luckyNumber-container {
+  background-image: url("../img/luckyNumber-back.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.luckyNumber-container p {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/******* progress bars *******/
+
+.flex-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.single-chart {
+  width: 125px;
+  justify-content: space-around;
+}
+
+.circular-chart {
+  display: block;
+  margin: 10px auto;
+  max-width: 80%;
+  max-height: 250px;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 4.2;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 4;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.circular-chart.orange .circle {
+  stroke: rgb(90, 12, 123);
+}
+
+.circular-chart.green .circle {
+  stroke: rgba(238, 21, 21, 1);
+}
+
+.circular-chart.blue .circle {
+  stroke: #ffdf06;
+}
+
+.percentage {
+  fill: #220828;
+  font-family: sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  text-anchor: middle;
+}
+
+/********** progress bar end **********/
+
+/*********** responsive ************/
+
+@media only screen and (max-width: 465px) {
+  .single-chart {
+    width: 90px;
+  }
+  .card-title {
+    font-size: 20px;
+  }
+  .social-media div {
+    width: 70px;
+  }
+  .social-media div img {
+    max-width: 35px;
+  }
+  .social-media div p {
+    font-size: 10px;
+  }
+  .future-horoscope-padding {
+    padding: 0 0 65px;
+  }
+  .first-card {
+    padding: 30px 20px 65px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .single-chart {
+    width: 80px;
+  }
+}
+
+/************ end of responsive ***********/
+
+/*********** start of color-background ****************/
+
+.lucky-color-container {
+  width: 65px;
+  height: 65px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+
+.lucky-color-red {
+  background: rgb(255, 107, 107);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 107, 107, 1) 0%,
+    rgba(255, 0, 0, 1) 100%
+  );
+}
+
+.lucky-color-orange {
+  background: rgb(255, 218, 149);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 218, 149, 1) 0%,
+    rgba(255, 108, 2, 1) 100%
+  );
+}
+
+.lucky-color-yellow {
+  background: rgb(255, 248, 170);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 248, 170, 1) 0%,
+    rgba(255, 248, 2, 1) 100%
+  );
+}
+
+.lucky-color-pink {
+  background: rgb(255, 197, 213);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 197, 213, 1) 0%,
+    rgba(255, 145, 175, 1) 100%
+  );
+}
+
+.lucky-color-blue {
+  background: rgb(135, 171, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(135, 171, 255, 1) 0%,
+    rgba(0, 30, 246, 1) 100%
+  );
+}
+
+.lucky-color-green {
+  background: rgb(153, 255, 155);
+  background: linear-gradient(
+    180deg,
+    rgba(153, 255, 155, 1) 0%,
+    rgba(0, 158, 39, 1) 100%
+  );
+}
+
+.lucky-color-brown {
+  background: rgb(255, 167, 80);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 167, 80, 1) 0%,
+    rgba(75, 38, 0, 1) 100%
+  );
+}
+
+.lucky-color-aqua {
+  background: rgb(233, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(233, 255, 255, 1) 0%,
+    rgba(0, 255, 255, 1) 100%
+  );
+}
+
+.lucky-color-lime {
+  background: rgb(246, 255, 209);
+  background: linear-gradient(
+    180deg,
+    rgba(246, 255, 209, 1) 0%,
+    rgba(208, 255, 20, 1) 100%
+  );
+}
+
+.lucky-color-black {
+  background: rgb(101, 101, 101);
+  background: linear-gradient(
+    180deg,
+    rgba(101, 101, 101, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.lucky-color-purple {
+  background: rgb(209, 135, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(209, 135, 255, 1) 0%,
+    rgba(107, 0, 175, 1) 100%
+  );
+}
+
+.lucky-color-navy {
+  background: rgb(0, 0, 237);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 237, 1) 0%,
+    rgba(0, 0, 128, 1) 100%
+  );
+}
+
+.lucky-color-silver {
+  background: rgb(237, 237, 237);
+  background: linear-gradient(
+    180deg,
+    rgba(237, 237, 237, 1) 0%,
+    rgba(192, 192, 192, 1) 100%
+  );
+}
+
+.lucky-color-white {
+  background: rgb(255, 255, 255);
+  border: 1px solid #000;
+}
+
+.lucky-color-gold {
+  background: rgb(255, 230, 97);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 230, 97, 1) 0%,
+    rgba(212, 178, 0, 1) 100%
+  );
+}
+
+.lucky-color-cream {
+  background: rgb(255, 253, 208);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 253, 208, 1) 0%,
+    rgba(255, 253, 208, 1) 100%
+  );
+  border: 1px solid #333;
+}
+
+.lucky-color-gray {
+  background: rgb(191, 191, 191);
+  background: linear-gradient(
+    180deg,
+    rgba(191, 191, 191, 1) 0%,
+    rgba(131, 131, 131, 1) 100%
+  );
+}
+
+.lucky-color-olive {
+  background: rgb(190, 190, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(190, 190, 0, 1) 0%,
+    rgba(128, 128, 0, 1) 100%
+  );
+}
+
+.lucky-color-teal {
+  background: rgb(0, 194, 194);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 194, 194, 1) 0%,
+    rgba(0, 96, 96, 1) 100%
+  );
+}
+
+.lucky-color-maroon {
+  background: rgb(236, 78, 137);
+  background: linear-gradient(
+    180deg,
+    rgba(236, 78, 137, 1) 0%,
+    rgba(135, 35, 73, 1) 100%
+  );
+}
+/*********** end of color-background ****************/
