@@ -184,6 +184,13 @@ body {
     );
   background-attachment: fixed;
   background-size: contain;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Opera and Firefox */
 }
 
 #main-content {
@@ -417,6 +424,14 @@ body {
   overflow: hidden;
 }
 
+.firstCard-Paragraph-shape p:not(:first-child) {
+  opacity: 0;
+}
+
+.future-horoscope-text p:not(:first-child) {
+  opacity: 0;
+}
+
 .selected-card {
   width: 95%;
   box-shadow: 0 2px 15px rgba(255, 255, 255, 0.9);
@@ -470,6 +485,17 @@ body {
   max-height: 95px;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+}
+
+.lucky-color-container {
+  width: 65px;
+  height: 65px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+
+.stones-text {
+  margin-top: 15px;
 }
 
 /******* progress bars *******/
@@ -557,7 +583,7 @@ body {
     padding: 30px 20px 65px;
   }
   .horoscope-container img {
-    max-width: 80px;
+    max-width: 75px;
   }
   .horoscope-container p {
     font-size: 13px;
@@ -571,25 +597,41 @@ body {
   }
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 330px) {
   .single-chart {
     width: 80px;
   }
   .horoscope-container img {
-    max-width: 75px;
+    max-width: 65px;
+  }
+}
+
+@media only screen and (max-width: 295px) {
+  .single-chart {
+    width: 70px;
+  }
+  .horoscope-container img {
+    max-width: 60px;
+  }
+  .horoscope-container p {
+    font-size: 11px;
+  }
+  .lucky-color-container {
+    width: 55px;
+    height: 55px;
+  }
+  .luckyNumber-container {
+    width: 55px;
+    height: 55px;
+  }
+  .luckyNumber-container p {
+    font-size: 25px !important;
   }
 }
 
 /************ end of responsive ***********/
 
 /*********** start of color-background ****************/
-
-.lucky-color-container {
-  width: 65px;
-  height: 65px;
-  margin-bottom: 10px;
-  border-radius: 50%;
-}
 
 .lucky-color-red {
   background: rgb(255, 107, 107);
