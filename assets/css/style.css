@@ -248,10 +248,6 @@ body {
   overflow: hidden;
 }
 
-.card-text-paragraph p:not(:first-child) {
-  display: none;
-}
-
 .card-btn {
   background: #ffdf06;
   color: #2a0135;
@@ -408,14 +404,17 @@ body {
 }
 
 .hidden-paragraph p:first-child {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
-  overflow: hidden;
   background: -webkit-linear-gradient(rgb(0, 0, 0), rgba(255, 255, 255, 0));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.firstCard-Paragraph-shape {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
 }
 
 .selected-card {
@@ -464,6 +463,13 @@ body {
   color: #fff;
   font-size: 30px;
   font-weight: 700;
+}
+
+#panel {
+  background-color: white;
+  max-height: 95px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
 
 /******* progress bars *******/
@@ -550,11 +556,27 @@ body {
   .first-card {
     padding: 30px 20px 65px;
   }
+  .horoscope-container img {
+    max-width: 80px;
+  }
+  .horoscope-container p {
+    font-size: 13px;
+  }
+  .luckyNumber-container p {
+    font-size: 30px !important;
+  }
+  .luckyNumber-container {
+    width: 65px;
+    height: 65px;
+  }
 }
 
 @media only screen and (max-width: 320px) {
   .single-chart {
     width: 80px;
+  }
+  .horoscope-container img {
+    max-width: 75px;
   }
 }
 
