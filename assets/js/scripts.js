@@ -5542,3 +5542,12 @@ $(".first-card-btn , .card-slide-close").click(function() {
     panel.style.maxHeight = panel.scrollHeight + "px";
   }
 });
+
+$(".today-section,.tomorrow-section, .week-section, .month-section").click(
+  function() {
+    location.href = $(this)
+      .children()
+      .eq(1)
+      .attr("href");
+  }
+);
