@@ -197,7 +197,7 @@ body {
   max-width: 500px;
   height: 100%;
   margin: auto;
-  padding: 10px 2px 50px;
+  padding: 0px 2px 50px;
 }
 
 .card {
@@ -210,9 +210,12 @@ body {
 .card-logo {
   background: #e4e4e4;
   border-radius: 50%;
-  max-width: 90px;
   margin-bottom: -43px;
   z-index: 1;
+}
+
+.card-logo img {
+  max-width: 90px;
 }
 
 .card-text {
@@ -433,9 +436,7 @@ body {
 }
 
 .selected-card {
-  width: 95%;
   box-shadow: 0 2px 15px rgba(255, 255, 255, 0.9);
-  transform: scale(1.02);
 }
 
 .card-slide-close {
@@ -496,6 +497,51 @@ body {
 
 .stones-text {
   margin-top: 15px;
+}
+
+.extra-topMargin {
+  margin-top: 150px;
+}
+
+.history-birthDate,
+.history-horoscope {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.greyFilter {
+  filter: grayscale(1);
+}
+
+.history-horoscope p:nth-child(2) {
+  width: 85px;
+}
+
+.nav-container {
+  height: 60px;
+  z-index: 100;
+  margin-bottom: 10px;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  position: fixed;
+  right: 0;
+  left: 0;
+  margin: auto;
+  padding: 5px 20px 0px;
+  font-size: 20px;
+  z-index: 100;
+  max-width: 500px;
+  background: #520772;
+}
+
+.top-nav img {
+  max-width: 50px;
 }
 
 /******* progress bars *******/
@@ -560,7 +606,7 @@ body {
 
 /*********** responsive ************/
 
-@media only screen and (max-width: 465px) {
+@media only screen and (max-width: 485px) {
   .single-chart {
     width: 90px;
   }
